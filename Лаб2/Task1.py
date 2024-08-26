@@ -14,3 +14,5 @@ def sumxy():
             z+=i
     return z
 
+print("Результат обчислень:", formula())
+print("Сума парних чисел в заданому діапазоні:", sumxy())
