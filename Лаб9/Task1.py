@@ -24,6 +24,7 @@ if file1:
     text = "Тут знаходиться рядок.\nЗнайдіть симетричні слова: мама, казка, потоп, кіт, око, целюлоза"
     file1.write(text)
     file1.close()
+    print("Файл закрито")
 
 file1 = openfile(file1_name, "r")
 file2 = openfile(file2_name, "w")
@@ -39,15 +40,17 @@ if file1 and file2:
     for word in words:
         for i in range(len(word)):
             if i>=len(word)/2:
-                file2.write(word+", ")
+                file2.write(word+" ")
                 break
             elif word[i].lower() != word[-i-1].lower():
                 break
     file2.close()
     file1.close()
+    print("Файли закрито")
 
 file2 = openfile(file2_name, "r")
 if file2:
     for word in file2.read().split():
         print(word)
     file2.close()
+    print("Файл закрито")
