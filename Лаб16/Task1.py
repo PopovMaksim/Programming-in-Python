@@ -45,3 +45,5 @@ delimiter = " "
 new_text = delimiter.join(without_stop_words)
 print("Кількість слів без стоп-слів і пунктуації:",count_words(new_text))
 most_used_words(new_text)
+
+File.close()
